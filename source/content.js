@@ -53,6 +53,7 @@ import addTitleToEmojis from './features/add-title-to-emojis';
 import sortMilestonesByClosestDueDate from './features/sort-milestones-by-closest-due-date';
 import openCIDetailsInNewTab from './features/open-ci-details-in-new-tab';
 import focusConfirmationButtons from './features/focus-confirmation-buttons';
+import fixMentionAutocompletion from './features/fix-mention-autocomplete';
 import addKeyboardShortcutsToCommentFields from './features/add-keyboard-shortcuts-to-comment-fields';
 import addCreateReleaseShortcut from './features/add-create-release-shortcut';
 import addCILink from './features/add-ci-link';
@@ -154,6 +155,7 @@ async function init() {
 
 async function onDomReady() {
 	enableFeature(markUnread);
+	enableFeature(fixMentionAutocompletion);
 	enableFeature(addOpenAllNotificationsButton);
 	enableFeature(enableCopyOnY);
 	enableFeature(addProfileHotkey);
